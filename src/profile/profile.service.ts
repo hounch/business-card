@@ -6,6 +6,12 @@ export class ProfileService {
   constructor(private prisma: PrismaService) {}
 
   async getProfile() {
-    return this.prisma.profile.findFirst();
+    return this.prisma.profile.findFirst({
+      include: {
+        skills: true,
+        experience: true,
+        projects: true,
+      },
+    });
   }
 }
