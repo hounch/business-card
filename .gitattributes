@@ -1,0 +1,28 @@
+# Normalize line endings to LF in the repo and in the working tree.
+# Overrides core.autocrlf for this repo on any OS.
+* text=auto eol=lf
+
+# Windows-specific scripts keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets — git must not try to normalize
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
+
+# Shell scripts and Docker files MUST be LF, otherwise containers break
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.pdf binary
+# Shell scripts and Docker files MUST be LF, otherwise containers break
+*.sh text eol=lf
+Dockerfile text eol=lf
