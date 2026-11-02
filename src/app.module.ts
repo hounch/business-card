@@ -16,6 +16,7 @@ import { AppService } from './app.service';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'), 
       sortSchema: true,
       playground: true,
+      introspection: true,
     }),
     PrismaModule,
     ProfileModule,
